@@ -14,7 +14,7 @@ import org.hibernate.Transaction;
  *
  * @author zS20006736
  */
-public class DAOEmpleado implements IDAOGeneral<Empleado, Long> { //Clase concreta que implementa un modelo abstracto que es IDAO y que es genericts
+public class DAOEmpleado implements IDAOGeneral<Empleado, Long> {
 
     @Override
     public Empleado create(Empleado p) {
@@ -79,16 +79,6 @@ public class DAOEmpleado implements IDAOGeneral<Empleado, Long> { //Clase concre
         }
 
         return lemp;
-        /*List<Empleado> lsRes=null;
-        Session session = HibernateUtil.getSession();
-        Transaction t = session.beginTransaction();
-        
-        List<Empleado> lsRes=
-                empleados = session.createQuery("from Empleado").list();//from ejemplo es lenguaje de hibernate
-        
-        t.commit();
-        session.close();
-        return lsRes;*/
     }
 
     @Override
